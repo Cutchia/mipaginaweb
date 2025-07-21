@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Tienda con Inicio Simulado</title>
+<title>Tienda con Inicio Simulado y Más Productos</title>
 <style>
   body { font-family: Arial, sans-serif; background: #f0f0f5; margin:0; padding:0; }
-  #login, #tienda { max-width: 600px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+  #login, #tienda { max-width: 700px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
   h2 { text-align: center; }
   button {
     width: 100%; padding: 10px; background: #4285F4; border: none; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;
@@ -18,6 +18,10 @@
   .producto img { width: 80px; height: 80px; object-fit: cover; border-radius: 6px; margin-right: 20px; }
   .detalle h3 { margin: 0 0 6px; }
   .precio { color: #e63946; font-weight: bold; }
+  #volver {
+    margin-top: 20px;
+    background: #777;
+  }
 </style>
 </head>
 <body>
@@ -29,6 +33,7 @@
 
 <div id="tienda" style="display:none;">
   <h2>Bienvenido a CoolWear Tienda</h2>
+
   <div class="producto">
     <img src="https://via.placeholder.com/80?text=Suéter+1" alt="Suéter Azul" />
     <div class="detalle">
@@ -36,6 +41,7 @@
       <p class="precio">$1500</p>
     </div>
   </div>
+
   <div class="producto">
     <img src="https://via.placeholder.com/80?text=Suéter+2" alt="Suéter Rojo" />
     <div class="detalle">
@@ -43,6 +49,7 @@
       <p class="precio">$1800</p>
     </div>
   </div>
+
   <div class="producto">
     <img src="https://via.placeholder.com/80?text=Suéter+3" alt="Suéter Verde" />
     <div class="detalle">
@@ -50,13 +57,74 @@
       <p class="precio">$1700</p>
     </div>
   </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+4" alt="Suéter Gris" />
+    <div class="detalle">
+      <h3>Suéter Gris Moderno</h3>
+      <p class="precio">$1600</p>
+    </div>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+5" alt="Suéter Negro" />
+    <div class="detalle">
+      <h3>Suéter Negro Elegante</h3>
+      <p class="precio">$2000</p>
+    </div>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+6" alt="Suéter Blanco" />
+    <div class="detalle">
+      <h3>Suéter Blanco Suave</h3>
+      <p class="precio">$1500</p>
+    </div>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+7" alt="Suéter Amarillo" />
+    <div class="detalle">
+      <h3>Suéter Amarillo Brillante</h3>
+      <p class="precio">$1750</p>
+    </div>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+8" alt="Suéter Naranja" />
+    <div class="detalle">
+      <h3>Suéter Naranja Cálido</h3>
+      <p class="precio">$1600</p>
+    </div>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+9" alt="Suéter Azul Oscuro" />
+    <div class="detalle">
+      <h3>Suéter Azul Oscuro</h3>
+      <p class="precio">$1900</p>
+    </div>
+  </div>
+
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+10" alt="Suéter Rojo Oscuro" />
+    <div class="detalle">
+      <h3>Suéter Rojo Oscuro</h3>
+      <p class="precio">$1800</p>
+    </div>
+  </div>
+
+  <button id="volver" onclick="volverLogin()">Volver al inicio</button>
 </div>
 
 <script>
   function loginGoogle() {
-    // Simula inicio con Google
     document.getElementById('login').style.display = 'none';
     document.getElementById('tienda').style.display = 'block';
+  }
+  function volverLogin() {
+    document.getElementById('tienda').style.display = 'none';
+    document.getElementById('login').style.display = 'block';
   }
 </script>
 
