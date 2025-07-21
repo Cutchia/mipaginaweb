@@ -1,35 +1,64 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mi primera página web segura" />
-  <title>Mi Página Segura</title>
-  <style>
-    body {
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    p {
-      color: #555;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.8em;
-      color: #888;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tienda con Inicio Simulado</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f0f0f5; margin:0; padding:0; }
+  #login, #tienda { max-width: 600px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+  h2 { text-align: center; }
+  button {
+    width: 100%; padding: 10px; background: #4285F4; border: none; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;
+  }
+  button:hover { background: #3367D6; }
+  .producto {
+    border: 1px solid #ddd; border-radius: 6px; padding: 10px; margin: 10px 0; display: flex; align-items: center; background: #fafafa;
+  }
+  .producto img { width: 80px; height: 80px; object-fit: cover; border-radius: 6px; margin-right: 20px; }
+  .detalle h3 { margin: 0 0 6px; }
+  .precio { color: #e63946; font-weight: bold; }
+</style>
 </head>
 <body>
-  <h1>¡Bienvenido a mi página segura!</h1>
-  <p>Este sitio está listo para ser subido con HTTPS.</p>
-  <footer>
-    &copy; 2025 - Todos los derechos reservados
-  </footer>
+
+<div id="login">
+  <h2>Iniciar sesión</h2>
+  <button onclick="loginGoogle()">Seguir con Google</button>
+</div>
+
+<div id="tienda" style="display:none;">
+  <h2>Bienvenido a CoolWear Tienda</h2>
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+1" alt="Suéter Azul" />
+    <div class="detalle">
+      <h3>Suéter Azul Clásico</h3>
+      <p class="precio">$1500</p>
+    </div>
+  </div>
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+2" alt="Suéter Rojo" />
+    <div class="detalle">
+      <h3>Suéter Rojo Vibrante</h3>
+      <p class="precio">$1800</p>
+    </div>
+  </div>
+  <div class="producto">
+    <img src="https://via.placeholder.com/80?text=Suéter+3" alt="Suéter Verde" />
+    <div class="detalle">
+      <h3>Suéter Verde Bosque</h3>
+      <p class="precio">$1700</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function loginGoogle() {
+    // Simula inicio con Google
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('tienda').style.display = 'block';
+  }
+</script>
+
 </body>
 </html>
